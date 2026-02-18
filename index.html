@@ -4,228 +4,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atelier Materia | Porcelain Craft Studio | Home</title>
+    <title>Atelier Materia | Ceramic Studio | Home</title>
 
-    <!-- Bootstrap CSS -->
+    <meta name="description" content="Atelier Materia is a modern European ceramic studio offering pottery workshops, porcelain painting and private creative events.">
+    <meta name="keywords" content="ceramic studio, pottery workshop, porcelain painting, atelier, creative studio, booking workshop">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/image/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/image/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/image/android-chrome-512x512.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-      <!-- Navigation -->
+    <!--Navbar-->
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/images/aterlier .png" alt="Atelier Materia" class="logo">
+                <img src="assets/image/aterlier .png" alt="Atelier Materia" class="logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Activities & Gallery</a>
+                        <a class="nav-link" href="Gallery.html">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a href="#events" class="nav-link">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a href="#contact" class="nav-link">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a href="booking.html" class="btn custom-button-filled ms-lg-3">Book now</a>
+                        <a href="booking.html" class="btn btn-book ms-lg-3">Book Now</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <header class="hero-section d-flex align-items-center text-center text-white">
-        <div class="container">
-            <h1 class="display-4 fw-bold">Shape. Glaze. Create.</h1>
-            <p class="lead mt-3">
-                A contemporary porcelain atelier offering mindful craft experiences
-                in an intimate studio setting.
-            </p>
-            <a href="booking.html" class="btn btn-lg btn-primary mt-4">
-                Book a Session
-            </a>
-        </div>
-    </header>
+    <!--Hero section-->
 
-    <!-- ABOUT SECTION -->
-    <section class="py-5">
+<section class="hero-section d-flex align-items-center text-center text-white">
+    <div class="container">
+        <h1 class="hero-title">Crafted by Hand. Inspired by Calm.</h1>
+        <p class="hero-subtitle mt-3">A modern European atelier</p>
+        <a href="#experience" class="btn btn-hero mt-4">Explore Our Workshops</a>
+    </div>
+</section>
+
+    <!--What you can experience section-->
+
+    <section id="experience" class="py-5 bg-light">
         <div class="container text-center">
-            <h2 class="mb-4">About Atelier Materia</h2>
-            <p class="mx-auto col-lg-8">
-                Atelier Materia is a European-inspired craft house dedicated to the art of porcelain.
-                We offer guided sessions where guests can paint, glaze, and personalize ceramic pieces
-                in a calm and welcoming studio environment.
-            </p>
-        </div>
-    </section>
-
-    <!-- SERVICES SECTION -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2>What You Can Create</h2>
-            </div>
-
-            <div class="row text-center">
-
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="card h-100 shadow-sm border-0">
+            <h2 class="section-title mb-5">What You Can Experience</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 text-start">
+                    <div class="card activity-card h-100 shadow-sm border-0">
+                        <img src="assets/image/pexels-kampus-6023609.jpg" class="card-img-top" alt="Porcelain Painting">
                         <div class="card-body">
-                            <i class="fa-solid fa-palette fa-2x mb-3"></i>
-                            <h5 class="card-title">Paint & Glaze</h5>
-                            <p class="card-text">
-                                Personalize cups, plates, and bowls with your own design.
-                            </p>
+                            <h5 class="card-title" style="color: var(--primary-color);">Porcelain Painting</h5>
+                            <p class="card-text small text-muted">Personalise your own ceramic pieces with guided techniques.</p>
+                            <ul class="list-group list-group-flush small mt-3">
+                                <li class="list-group-item d-flex justify-content-between px-0 bg-transparent">Adults <span>€35</span></li>
+                                <li class="list-group-item d-flex justify-content-between px-0 bg-transparent">Children <span>€20</span></li>
+                            </ul>
+                            <a href="booking.html" class="btn btn-hero btn-sm w-100 mt-3">Book Now</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="card h-100 shadow-sm border-0">
+                <div class="col-md-6 col-lg-3 text-start">
+                    <div class="card activity-card h-100 shadow-sm border-0">
+                        <img src="assets/image/earl-wilcox-T6yYk7q-82A-unsplash.jpg" class="card-img-top" alt="Pottery Wheel">
                         <div class="card-body">
-                            <i class="fa-solid fa-fire fa-2x mb-3"></i>
-                            <h5 class="card-title">Kiln Firing</h5>
-                            <p class="card-text">
-                                We professionally fire and finish your creations.
-                            </p>
+                            <h5 class="card-title" style="color: var(--primary-color);">Wheel Workshop</h5>
+                            <p class="card-text small text-muted">Discover the art of shaping clay on a traditional wheel.</p>
+                            <ul class="list-group list-group-flush small mt-3">
+                                <li class="list-group-item d-flex justify-content-between px-0 bg-transparent">Adults <span>€45</span></li>
+                                <li class="list-group-item d-flex justify-content-between px-0 bg-transparent">Children <span>€30</span></li>
+                            </ul>
+                            <a href="booking.html" class="btn btn-hero btn-sm w-100 mt-3">Book Now</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="card h-100 shadow-sm border-0">
+                <div class="col-md-6 col-lg-3 text-start">
+                    <div class="card activity-card h-100 shadow-sm border-0">
+                        <img src="assets/image/pexels-cottonbro-6694305.jpg" class="card-img-top" alt="Private Events">
                         <div class="card-body">
-                            <i class="fa-solid fa-users fa-2x mb-3"></i>
-                            <h5 class="card-title">Private Workshops</h5>
-                            <p class="card-text">
-                                Celebrate birthdays or host creative gatherings.
-                            </p>
+                            <h5 class="card-title" style="color: var(--primary-color);">Private Events</h5>
+                            <p class="card-text small text-muted">Celebrate birthdays or gatherings in a creative atmosphere.</p>
+                            <ul class="list-group list-group-flush small mt-3">
+                                <li class="list-group-item d-flex justify-content-between px-0 bg-transparent">Group (5) <span>€150</span></li>
+                                <li class="list-group-item d-flex justify-content-between px-0 bg-transparent">Extra Guest <span>€25</span></li>
+                            </ul>
+                            <a href="booking.html" class="btn btn-hero btn-sm w-100 mt-3">Inquire Now</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="card h-100 shadow-sm border-0">
+                <div class="col-md-6 col-lg-3 text-start">
+                    <div class="card activity-card h-100 shadow-sm border-0">
+                        <img src="assets/image/jason-leung-fuOXUYumzg0-unsplash.jpg" class="card-img-top" alt="Seasonal Workshops">
                         <div class="card-body">
-                            <i class="fa-solid fa-brush fa-2x mb-3"></i>
-                            <h5 class="card-title">Beginner Friendly</h5>
-                            <p class="card-text">
-                                No experience required — guidance included.
-                            </p>
+                            <h5 class="card-title" style="color: var(--primary-color);">Seasonal Specials</h5>
+                            <p class="card-text small text-muted">Limited themed workshops available throughout the year.</p>
+                            <ul class="list-group list-group-flush small mt-3">
+                                <li class="list-group-item d-flex justify-content-between px-0 bg-transparent">Session <span>€40</span></li>
+                                <li class="list-group-item d-flex justify-content-between px-0 bg-transparent">Materials <span>Included</span></li>
+                            </ul>
+                            <a href="booking.html" class="btn btn-hero btn-sm w-100 mt-3">Inquire Now</a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- EVENTS SECTION -->
-    <section id="events" class="py-5">
-        <div class="container">
-            <div class="row align-items-center">
-
-                <div class="col-lg-6 mb-4">
-                    <h2>Private Events & Group Sessions</h2>
-                    <p>
-                        Our studio is available for small private events, creative
-                        team-building workshops, and birthday celebrations.
-                        Due to limited seating, advance booking is required.
-                    </p>
-                    <a href="booking.html" class="btn btn-outline-dark mt-3">
-                        Plan Your Event
-                    </a>
+<!-- Upcoming Special Section -->
+<section id="events" class="py-5 bg-light">
+    <div class="container">
+        <!-- Section Title -->
+        <h2 class="section-title text-center mb-5 special-tag">Upcoming Special</h2>
+        
+        <div class="row align-items-center g-4">
+            <!-- Left: Event Image -->
+            <div class="col-lg-6">
+                <div class="event-img rounded-3 overflow-hidden shadow-sm">
+                    <img src="assets/image/pexels-gustavo-fring-4241346.jpg" 
+                         alt="Mother’s Day Ceramic Experience" 
+                         class="img-fluid w-100">
                 </div>
-
-                <div class="col-lg-6">
-                    <img src="assets/images/studio-event.jpg" alt="Studio Event"
-                        class="img-fluid rounded shadow">
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer id="contact" class="py-4 bg-dark text-white">
-        <div class="container text-center">
-
-            <h5>Atelier Materia</h5>
-            <p>
-                12 Artisan Street, 10115 Berlin, Germany <br>
-                Email: info@ateliermateria.com
-            </p>
-
-            <div class="mb-3">
-                <a href="#" class="text-white me-3">
-                    <i class="fa-brands fa-instagram fa-lg"></i>
-                </a>
-                <a href="#" class="text-white me-3">
-                    <i class="fa-brands fa-youtube fa-lg"></i>
-                </a>
             </div>
 
-            <small>&copy; 2026 Atelier Materia. All rights reserved.</small>
+            <!-- Right: Event Details -->
+            <div class="col-lg-6">
+                <h4 class="event-title mb-3">Mother’s Day Ceramic Experience</h4>
 
+                <p class="lead mb-4">
+                    Celebrate the most important woman in your life with a morning of creativity and calm. 
+                    Create lasting memories and unique ceramic pieces together.
+                </p>
+
+                <!-- Features List -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-success me-2"></i> 2.5 Hour Guided Workshop</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> All Premium Materials Included</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Prosecco & Light Snacks</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i> Professional Firing & Glazing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Simple Special Offer Paragraph -->
+                <p class="special-offer-text mb-3">
+                    <strong>Special Offer:</strong> 15% off when you join with your mother! Limited to 10 spots per session.
+                </p>
+
+                <!-- Call-to-Action Button -->
+                <a href="booking.html" class="btn btn-hero btn-lg px-5 mt-2">Book Your Experience</a>
+            </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-</body>
+<!--footer-->
+<footer id="contact" class="footer mt-auto py-5">
+    <div class="container">
+        <div class="row justify-content-between gx-lg-5">
 
-</html>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Font Awesome kit -->
-<script src="https://kit.fontawesome.com/ad8754aeee.js" crossorigin="anonymous"></script>
-<!-- JavaScript code to ensure the Bootstrap mobile navbar collapses when navigating to in-page links -->
-    <script>
-       document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
-    link.addEventListener("click", function (e) {
-        const targetId = this.getAttribute("href");
-
-        // Only run this for internal # links
-        if (targetId.startsWith("#")) {
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                e.preventDefault();
-
-                // 1. Smooth scroll to section
-                const navHeight = document.querySelector(".navbar").offsetHeight;
-                window.scrollTo({
-                    top: targetSection.offsetTop - navHeight,
-                    behavior: "smooth"
-                });
-
-                // 2. THE FIX: Close the mobile menu manually
-                const navbarContent = document.getElementById("navbarNav");
-                const bsCollapse = bootstrap.Collapse.getInstance(navbarContent);
+               <div class="col-md-5"> 
+                <h2 class="section-title">Visit the Atelier</h2>
+                <p class="contact-description">Located in the heart of Berlin. Stop by to see our latest pieces or pick up your fired ceramics.</p>
                 
-                // If the menu is currently open (shown), hide it
-                if (bsCollapse) {
-                    bsCollapse.hide();
+                <div class="contact-detail">
+                    <i class="fas fa-map-marker-alt"></i> Ceramicstr. 12, 10115 Berlin
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-envelope"></i> info@ateliermateria.com
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-phone"></i> +49 30 1234 5678
+                </div>
+
+                <div class="social-icons-row">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+                <div class="col-md-5"> 
+                    <h2 class="section-title">Opening Hours</h2>
+                <div class="hours-container">
+                    <ul class="hours-list">
+                        <li><span>Mon - Tue</span><span>10:00 - 18:00</span></li>
+                        <li class="closed-day"><span>Wednesday</span><span>Closed for Firing</span></li>
+                        <li><span>Thu - Fri</span><span>10:00 - 18:00</span></li>
+                        <li><span>Saturday</span><span>11:00 - 16:00</span></li>
+                        <li class="closed-day"><span>Sunday</span><span>Closed</span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+  
+    <!--Bootstrap JSscript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Fontawesome-->
+    <script src="https://kit.fontawesome.com/ad8754aeee.js" crossorigin="anonymous"></script>
+
+    <script>
+        document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
+            link.addEventListener("click", function (e) {
+                const targetId = this.getAttribute("href");
+                if (targetId.startsWith("#")) {
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        e.preventDefault();
+                        const navHeight = document.querySelector(".navbar").offsetHeight;
+                        window.scrollTo({
+                            top: targetSection.offsetTop - navHeight,
+                            behavior: "smooth"
+                        });
+                        const navbarContent = document.getElementById("navbarNav");
+                        const bsCollapse = bootstrap.Collapse.getInstance(navbarContent);
+                        if (bsCollapse) {
+                            bsCollapse.hide();
+                        }
+                    }
                 }
-            }
-        }
-    });
-});
+            });
+        });
     </script>
 </body>
 

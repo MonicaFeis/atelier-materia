@@ -1,171 +1,382 @@
-/*Google Fonts*/
-@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Montserrat:wght@300;400;600&display=swap');
+/* 1. GOOGLE FONTS & VARIABLES */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-  /* Brand Colors */
-  --primary-color: #3E2C41;      /* Deep plum */
-  --secondary-color: #B8A1C9;    /* Soft lavender */
-  --highlight-color: #C49A6C;    /* Warm clay gold */
-  --highlight-hover: #E7C8A0;    /* Soft sand */
-  --background-light: #F8F6F3;   /* Warm neutral */
-  --text-dark: #2d2d2d;
-  --soft-accent: #7A6C85;
-
-  /* Fonts */
-  --primary-font: 'La Belle Aurore', cursive;
-  --secondary-font: 'Montserrat', sans-serif;
+    --primary-color: #4B2E3F;         /* Deep Plum */
+    --highlight-color: #C49A6C;       /* Warm Clay */
+    --highlight-hover: #b5835a;      
+    --background-light: #F8F6F3;     
+    --text-dark: #2D2D2D;            
+    --font-handwritten: 'Great Vibes', cursive;
+    --font-sans: 'Montserrat', sans-serif;
 }
 
-/* Globel style*/
+/* 2. GLOBAL STYLES */
+body {
+    font-family: var(--font-sans);
+    padding-top: 70px; 
+    overflow-x: hidden;
+}
+
+h2, h3, .section-title {
+    font-family: var(--font-handwritten) !important;
+    color: var(--primary-color);
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+html, body {
+    height: 100%; /* Required to tell the browser the page is at least full-screen */
+    margin: 0;
+}
 
 body {
-  font-family: var(--secondary-font);
-  color: var(--text-dark);
-  background-color: var(--background-light);
-  padding-top: 80px; /* Space for fixed navbar */
+    display: flex;
+    flex-direction: column; /* Stacks header, main, and footer vertically */
+    min-height: 100vh; /* Ensures the body is at least the height of the viewport */
+    font-family: var(--font-sans);
+    padding-top: 70px; 
+    overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: var(--primary-font);
-  font-weight: 600;
-  color: var(--primary-color);
+/* This targets the content between your nav and footer */
+main {
+    flex: 1 0 auto; /* This "pushes" the footer down by taking up all available empty space */
 }
-
-section {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-/* Buttons */
-
-.custom-button-filled {
-    border: 2px solid var(--highlight-color);
-    background-color: var(--highlight-color);
-    color: white;
-}
-
-.custom-button-filled:hover {
-    border: 2px solid var(--secondary-color);
-    background-color: var(--secondary-color);
-    color: white;
-}
-
-.custom-button-outline {
-    border: 3px solid var(--highlight-color);
-    padding: 7px 25px;
-    color: var(--highlight-color)
-}
-
-.custom-button-outline:hover {
-    background-color: var(--highlight-color);
-    color: white
-}
-
-/* Navbar */
-
-#navbar {
-    background-color: var(--primary-color);
-}
-
-#navbar .logo {
-    height: 40px;    /* Adjust this value to find your perfect fit */
-    width: auto;      /* Keeps the proportions correct */
-    display: block;
-}
-
-/* Hero section*/
-
-.hero-section {
-  height: 100vh;
-  background: linear-gradient(rgba(62,44,65,0.6), rgba(62,44,65,0.6)),
-              url("../assets/images/hero.jpg") center/cover no-repeat;
-  color: #ffffff;
-}
-
-.hero-section h1 {
-  font-size: 3rem;
-}
-
-.hero-section p {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* Hero Button */
-.btn-primary {
-  background-color: var(--highlight-color);
-  border: none;
-  font-family: var(--primary-font);
-  font-weight: 600;
-  padding: 12px 28px;
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: var(--highlight-hover);
-  color: var(--primary-color);
-}
-
-/* activites section */
-
-.card {
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card i {
-  color: var(--primary-color);
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
-}
-
-/* event section */
-
-.btn-outline-dark {
-  border-color: var(--primary-color);
-  color: var(--primary-color);
-  font-family: var(--primary-font);
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.btn-outline-dark:hover {
-  background-color: var(--highlight-color);
-  border-color: var(--highlight-color);
-  color: #fff;
-}
-
-/* footer*/
 
 footer {
-  background-color: var(--primary-color);
+    flex-shrink: 0; /* Prevents the footer from squishing */
 }
 
-footer h5 {
-  color: #ffffff;
-  font-family: var(--primary-font);
+/* 3. NAVBAR & BUTTONS */
+.navbar {
+    background-color: var(--primary-color) !important; 
+    padding: 10px 0;
 }
 
-footer p {
-  color: #ddd;
-  font-size: 0.95rem;
+.logo {
+    height: 35px !important; 
+    width: auto !important;
+    transition: 0.3s ease;
 }
 
-footer a {
-  color: var(--soft-accent);
-  transition: color 0.3s ease;
+.btn-book, .btn-hero, .btn-discover, .activity-card .btn {
+    background-color: var(--highlight-color) !important; 
+    color: white !important;
+    border-radius: 8px !important;
+    padding: 10px 25px !important;
+    font-weight: 500;
+    border: none !important;
+    transition: 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
-footer a:hover {
-  color: var(--highlight-color);
+.btn-book:hover, .btn-hero:hover, .btn-discover:hover {
+    background-color: var(--highlight-hover) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-footer small {
-  color: #aaa;
+/* 4. HERO SECTION */
+
+.hero-section {
+    min-height: 100vh;
+    width: 100%;
+    
+    /* Update the URL here to match your new filename */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('../image/jessica-ruscello-G8vPQ-XVxxY-unsplash.jpg') center/cover no-repeat;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    
+    /* Pull the section up so the image starts behind the navbar */
+    margin-top: -70px; 
+}
+
+
+.hero-title {
+    font-family: var(--font-handwritten) !important;
+    /* clamp(minimum, preferred, maximum) */
+    font-size: clamp(3rem, 10vw, 6.5rem); 
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    /* Adds a subtle shadow to make text pop against the background image */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 5. ELEGANT BOOKING SECTION (POTTERY FOCUS) */
+/* 1. The Bottom Layer (The Pottery Image) */
+.booking-section {
+    background-image: url('../image/warion-taipei-8QIAj5tHDdc-unsplash.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 2. The Middle Layer (The Soft Transparent Box) */
+.booking-form-wrapper {
+    background: rgba(255, 255, 255, 0.2) !important; /* Soft transparency */
+    backdrop-filter: blur(10px); /* Creates the "form" feel over the image */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle edge */
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 550px;
+    width: 100%;
+}
+
+.booking-notice {
+    color: white;
+    font-weight: 500; 
+}
+
+/* 3. The Top Layer (The Text) */
+.booking-section .form-label {
+    color: #4B2E3F !important;
+    font-weight: 600;
+    display: block; /* Ensures it sits properly above the input */
+    text-align: left; /* Optional: makes labels easier to read in forms */
+}
+
+/* --- REFINED INPUTS --- */
+.custom-input {
+    /* Adding a subtle border so inputs don't disappear into the linen background */
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    border: 1px solid rgba(75, 46, 63, 0.2) !important;
+    color: #2D2D2D !important;
+}
+
+
+/* Button scaling */
+.btn-book {
+    padding: 12px !important;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Events*/
+/* Event Title */
+.event-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* Special Offer Text */
+.special-offer-text {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* Features list icon spacing */
+ul.list-unstyled li i {
+    font-size: 0.9rem;
+}
+
+/* Section padding and responsive adjustments */
+section#events {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/* Tablet devices (992px and below) */
+@media (max-width: 992px) {
+    .event-title {
+        font-size: 2rem;
+    }
+    .lead {
+        font-size: 1rem;
+    }
+    .special-offer-text {
+        font-size: 1rem;
+    }
+    section#events {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+/* Small devices (768px and below) */
+@media (max-width: 768px) {
+    .event-title {
+        font-size: 1.8rem;
+    }
+    .lead, .special-offer-text {
+        font-size: 0.95rem;
+    }
+    section#events {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+}
+
+/*Gallery page */
+
+/* Push page below fixed navbar */
+.gallery-page {
+    padding-top: 100px; /* safer for Bootstrap navbar */
+    background-color: #faf8f6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make footer stay at bottom */
+.gallery-page footer {
+    margin-top: auto;
+}
+
+/* Page header */
+
+.gallery-page .page-header {
+    padding: 4rem 0 2rem 0;
+}
+
+.gallery-page .section-title {
+    font-family: var(--font-handwritten);
+    font-size: 3rem;
+    color: #4B2E3F;
+    letter-spacing: 1px;
+}
+
+
+/* Gallery style*/
+
+#gallery {
+    padding-bottom: 5rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Remove aspect-ratio for Pinterest feel */
+.gallery-img {
+    width: 100%;
+    height: auto; /* allows natural heights */
+    display: block;
+    transition: transform 0.5s ease, filter 0.4s ease;
+}
+
+/* Hover lift effect */
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Zoom image slightly */
+.gallery-item:hover .gallery-img {
+    transform: scale(1.05);
+    filter: brightness(92%);
+}
+
+
+/* fade in animation */
+
+.gallery-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+/* Stagger effect */
+.gallery-item:nth-child(2) { animation-delay: 0.1s; }
+.gallery-item:nth-child(3) { animation-delay: 0.2s; }
+.gallery-item:nth-child(4) { animation-delay: 0.3s; }
+.gallery-item:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 6. CONTACT & FOOTER (JUSTIFIED LEFT) */
+
+#contact {
+    background-color: var(--primary-color) !important; 
+    color: #ffffff !important;
+    padding: 60px 0;
+}
+
+#contact .section-title {
+    color: #ffffff !important;
+    font-size: 3.2rem !important;
+}
+
+.hours-container {
+    max-width: 320px; 
+    width: 100%;
+}
+
+.hours-list {
+    list-style: none;
+    padding: 0;
+}
+
+.hours-list li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 6px 0 !important;
+}
+
+.contact-detail i {
+    color: var(--highlight-color) !important;
+    width: 28px;
+}
+
+.social-icons-row {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons-row a i {
+    color: #ffffff !important;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.social-icons-row a:hover i {
+    color: var(--highlight-color) !important;
+    transform: translateY(-3px);
+}
+/* Add space between individual contact lines */
+.contact-detail {
+    margin-bottom: 1rem; /* Adjust this for more/less space */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the icon and the text */
+}
+
+/* Add space between the text and the social icons row */
+.social-icons-row {
+    margin-top: 2rem; 
+    display: flex;
+    gap: 20px;
+}
+
+/* Add space between the rows in the opening hours list */
+.hours-list li {
+    padding: 0.8rem 0; /* Adds vertical space to each row */
+    border-bottom: 1px solid rgba(255,255,255,0.1); /* Optional: adds a thin line between days */
 }
 
 /* Media queries */
@@ -211,6 +422,21 @@ footer small {
     #services .card-body {
         min-height: 195px;
     }
+
+
+@media screen and (max-width: 768px) {
+    /* This makes the big title fit on tablets and phones */
+    .hero-title {
+        font-size: 3.5rem !important; 
+        line-height: 1.2;
+    }
+
+    /* You might also want to shrink the hero section height slightly on mobile 
+       so the user can see there is content below the fold */
+    .hero-section {
+        min-height: 80vh; 
+    }
+}
 }.example {
     display: -ms-grid;
     display: grid;
@@ -225,3 +451,5 @@ footer small {
     background: -o-linear-gradient(top, white, black);
     background: linear-gradient(to bottom, white, black);
 }
+
+
