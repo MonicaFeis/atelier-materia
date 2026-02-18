@@ -85,7 +85,7 @@ footer {
     
     /* Update the URL here to match your new filename */
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                url('../images/jessica-ruscello-G8vPQ-XVxxY-unsplash.jpg') center/cover no-repeat;
+                url('assets/images/jessica-ruscello-G8vPQ-XVxxY-unsplash.jpg') center/cover no-repeat;
     
     display: flex;
     flex-direction: column;
@@ -112,7 +112,7 @@ footer {
 /* 5. ELEGANT BOOKING SECTION (POTTERY FOCUS) */
 /* 1. The Bottom Layer (The Pottery Image) */
 .booking-section {
-    background-image: url('../images/warion-taipei-8QIAj5tHDdc-unsplash.jpg') !important;
+    background-image: url('assets/images/warion-taipei-8QIAj5tHDdc-unsplash.jpg') !important;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
