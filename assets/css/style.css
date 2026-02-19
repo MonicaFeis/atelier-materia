@@ -136,9 +136,9 @@ footer {
     background: rgba(255, 255, 255, 0.2) !important;
     backdrop-filter: blur(10px); 
     border: 1px solid rgba(255, 255, 255, 0.3); 
-    padding: 30px 20px;
+    padding: 25px 15px;
     border-radius: 15px;
-    max-width: 650px;
+    max-width: 700px;
     width: 100%;
 }
 
@@ -373,11 +373,17 @@ section#events {
         padding-bottom: 2.5rem;
     }
     .booking-section {
-        padding: 4rem 2rem; 
+        padding: 4rem 2rem;
+        min-height: 100vh;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
        
     }
     .booking-form-wrapper {
-        padding: 40px;     
+        padding: 40px;
+        max-width: 700px;  
+        width: 100%;   
     }
 }
 
