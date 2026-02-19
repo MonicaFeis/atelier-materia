@@ -128,6 +128,7 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 2rem 1rem;
+    margin: 0;
 }
 
 /* The Middle Layer (The Soft Transparent Box) */
@@ -135,10 +136,10 @@ footer {
     background: rgba(255, 255, 255, 0.2) !important;
     backdrop-filter: blur(10px); 
     border: 1px solid rgba(255, 255, 255, 0.3); 
-    padding: 25px 15px;
+    padding: 30px 20px;
     border-radius: 15px;
-    max-width: 850px;
-    width: 95%;
+    max-width: 650px;
+    width: 100%;
 }
 
 .booking-notice {
@@ -372,19 +373,10 @@ section#events {
         padding-bottom: 2.5rem;
     }
     .booking-section {
-        /* Give the background more room to show */
-        padding: 5rem 2rem; 
-        /* Fills the gap between navbar and footer */
-        min-height: 100vh;
-        /* Enables vertical center */   
-        display: flex;      
-        align-items: center;
-        justify-content: center;
+        padding: 4rem 2rem; 
+       
     }
-
     .booking-form-wrapper {
-        max-width: 800px;  
-        width: 100%;
         padding: 40px;     
     }
 }
