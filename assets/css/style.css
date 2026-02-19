@@ -123,21 +123,24 @@ footer {
     background-image: url('../images/warion-taipei-8QIAj5tHDdc-unsplash.jpg') !important;
     background-size: cover;
     background-position: center;
-    padding: 5rem;
-    display: flex;
+    padding: 2rem 1rem;
+    display: block;
     align-items: center;
     justify-content: center;
 }
 
 /* The Middle Layer (The Soft Transparent Box) */
 .booking-form-wrapper {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     background: rgba(255, 255, 255, 0.2) !important;
     backdrop-filter: blur(10px); 
     border: 1px solid rgba(255, 255, 255, 0.3); 
-    padding: 40px;
+    padding: 25px 15px;
     border-radius: 15px;
     max-width: 550px;
-    width: 100%;
+    width: 95%;
 }
 
 .booking-notice {
@@ -203,37 +206,6 @@ ul.list-unstyled li i {
 section#events {
     padding-top: 4rem;
     padding-bottom: 4rem;
-}
-
-/* Tablet devices (992px and below) */
-@media (max-width: 992px) {
-    .event-title {
-        font-size: 2rem;
-    }
-    .lead {
-        font-size: 1rem;
-    }
-    .special-offer-text {
-        font-size: 1rem;
-    }
-    section#events {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-}
-
-/* Small devices (768px and below) */
-@media (max-width: 768px) {
-    .event-title {
-        font-size: 1.8rem;
-    }
-    .lead, .special-offer-text {
-        font-size: 0.95rem;
-    }
-    section#events {
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
-    }
 }
 
 /*Gallery page */
@@ -390,8 +362,20 @@ section#events {
     /* Make all service cards the same height for consistency */
     #services .card-body {
         min-height: 191px;
+        }
+       .event-title {
+        font-size: 1.8rem;
+    }
+    .lead, .special-offer-text {
+        font-size: 0.95rem;
+    }
+    section#events {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
     }
 }
+
+
 
 /* Large devices (small laptops, 992px and up) */
 @media screen and (min-width: 992px) {
@@ -399,7 +383,18 @@ section#events {
     #services .card-body {
         min-height: auto;
     }
+        .lead {
+        font-size: 1rem;
+    }
+    .special-offer-text {
+        font-size: 1rem;
+    }
+    section#events {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
 }
+
 
 /* xl devices (large desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
