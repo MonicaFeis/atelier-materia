@@ -117,18 +117,29 @@ footer {
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/*Booking section +/
+/*Booking section */
 /*The Bottom Layer (The Pottery Image) */
 .booking-section {
     background-image: url('../images/warion-taipei-8QIAj5tHDdc-unsplash.jpg') !important;
     background-size: cover;
     background-position: center;
-    min-height: 100 vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 1rem;
-    margin: 0;
+    padding: 100px 1rem 2rem 1rem;
+    margin-top: -76px;
+}
+
+.booking-section .container {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+
+}
+
+.booking-section .row {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
 }
 
 /* The Middle Layer (The Soft Transparent Box) */
