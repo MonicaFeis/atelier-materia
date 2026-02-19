@@ -123,7 +123,7 @@ footer {
     background-image: url('../images/warion-taipei-8QIAj5tHDdc-unsplash.jpg') !important;
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    padding: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
