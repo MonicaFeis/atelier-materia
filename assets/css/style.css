@@ -33,6 +33,10 @@ html, body {
     margin: 0;
 }
 
+html {
+    scroll-padding-top: 80px;
+}
+
 body {
     display: flex;
     /* Stacks header, main, and footer vertically */
@@ -115,6 +119,12 @@ footer {
     margin-bottom: 1rem;
     /* Adds a subtle shadow to make text pop against the background image */
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*Activites cards container */
+.activity-card .card-body {
+    display: flex;
+    flex-direction: column;
 }
 
 /*Booking section */
