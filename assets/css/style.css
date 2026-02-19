@@ -34,7 +34,7 @@ html, body {
 }
 
 html {
-    scroll-padding-top: 80px;
+    scroll-padding-top: 100px;
 }
 
 body {
@@ -125,6 +125,19 @@ footer {
 .activity-card .card-body {
     display: flex;
     flex-direction: column;
+    /*Ensure the body filled the card */
+    height: 100%;
+}
+
+.activity-card .card-text {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+/*Ensure the list and button stay at bottom*/
+.activity-card .list-group {
+    margin-top: auto;
+    margin-bottom: 15px;
 }
 
 /*Booking section */
