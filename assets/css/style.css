@@ -326,6 +326,7 @@ section#events {
 #contact {
     background-color: var(--primary-color);
     color: white;
+    padding-top: 4rem;
     padding-bottom: 3rem;
 }
 
@@ -358,6 +359,8 @@ section#events {
 #contact .table-dark * {
     background-color: transparent;
 }
+
+
 
 
 /* Media queries */
