@@ -123,23 +123,21 @@ footer {
     background-image: url('../images/warion-taipei-8QIAj5tHDdc-unsplash.jpg') !important;
     background-size: cover;
     background-position: center;
-    padding: 2rem 1rem;
-    display: block;
+    min-height: 100 vh;
+    display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2rem 1rem;
 }
 
 /* The Middle Layer (The Soft Transparent Box) */
 .booking-form-wrapper {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     background: rgba(255, 255, 255, 0.2) !important;
     backdrop-filter: blur(10px); 
     border: 1px solid rgba(255, 255, 255, 0.3); 
     padding: 25px 15px;
     border-radius: 15px;
-    max-width: 550px;
+    max-width: 850px;
     width: 95%;
 }
 
@@ -373,8 +371,23 @@ section#events {
         padding-top: 2.5rem;
         padding-bottom: 2.5rem;
     }
-}
+    .booking-section {
+        /* Give the background more room to show */
+        padding: 5rem 2rem; 
+        /* Fills the gap between navbar and footer */
+        min-height: 100vh;
+        /* Enables vertical center */   
+        display: flex;      
+        align-items: center;
+        justify-content: center;
+    }
 
+    .booking-form-wrapper {
+        max-width: 800px;  
+        width: 100%;
+        padding: 40px;     
+    }
+}
 
 
 /* Large devices (small laptops, 992px and up) */
