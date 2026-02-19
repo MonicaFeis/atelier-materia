@@ -1,6 +1,8 @@
-/* 1. GOOGLE FONTS & VARIABLES */
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap');
 
+
+/* Color Variables */
 :root {
     --primary-color: #4B2E3F;         /* Deep Plum */
     --highlight-color: #C49A6C;       /* Warm Clay */
@@ -11,7 +13,7 @@
     --font-sans: 'Montserrat', sans-serif;
 }
 
-/* 2. GLOBAL STYLES */
+/* Global Style */
 body {
     font-family: var(--font-sans);
     padding-top: 70px; 
@@ -24,30 +26,36 @@ h2, h3, .section-title {
     font-size: 3.5rem;
     font-weight: 400;
 }
+
+/* Required to tell the browser the page is at least full-screen */
 html, body {
-    height: 100%; /* Required to tell the browser the page is at least full-screen */
+    height: 100%; 
     margin: 0;
 }
 
 body {
     display: flex;
-    flex-direction: column; /* Stacks header, main, and footer vertically */
-    min-height: 100vh; /* Ensures the body is at least the height of the viewport */
+    /* Stacks header, main, and footer vertically */
+    flex-direction: column;
+    /* Ensures the body is at least the height of the viewport */
+    min-height: 100vh; 
     font-family: var(--font-sans);
     padding-top: 70px; 
     overflow-x: hidden;
 }
 
 /* This targets the content between your nav and footer */
+/* This "pushes" the footer down by taking up all available empty space */
 main {
-    flex: 1 0 auto; /* This "pushes" the footer down by taking up all available empty space */
+    flex: 1 0 auto; 
 }
 
+/* Prevents the footer from squishing */
 footer {
-    flex-shrink: 0; /* Prevents the footer from squishing */
+    flex-shrink: 0; 
 }
 
-/* 3. NAVBAR & BUTTONS */
+/* Navbar*/
 .navbar {
     background-color: var(--primary-color) !important; 
     padding: 10px 0;
@@ -77,7 +85,7 @@ footer {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* 4. HERO SECTION */
+/* Hero section */
 
 .hero-section {
     min-height: 100vh;
@@ -109,8 +117,8 @@ footer {
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* 5. ELEGANT BOOKING SECTION (POTTERY FOCUS) */
-/* 1. The Bottom Layer (The Pottery Image) */
+/*Booking section +/
+/*The Bottom Layer (The Pottery Image) */
 .booking-section {
     background-image: url('../images/warion-taipei-8QIAj5tHDdc-unsplash.jpg') !important;
     background-size: cover;
@@ -121,11 +129,11 @@ footer {
     justify-content: center;
 }
 
-/* 2. The Middle Layer (The Soft Transparent Box) */
+/* The Middle Layer (The Soft Transparent Box) */
 .booking-form-wrapper {
-    background: rgba(255, 255, 255, 0.2) !important; /* Soft transparency */
-    backdrop-filter: blur(10px); /* Creates the "form" feel over the image */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle edge */
+    background: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
     padding: 40px;
     border-radius: 15px;
     max-width: 550px;
@@ -137,15 +145,15 @@ footer {
     font-weight: 500; 
 }
 
-/* 3. The Top Layer (The Text) */
+/*Booking form label */
 .booking-section .form-label {
     color: #4B2E3F !important;
     font-weight: 600;
-    display: block; /* Ensures it sits properly above the input */
-    text-align: left; /* Optional: makes labels easier to read in forms */
+    display: block; 
+    text-align: left; 
 }
 
-/* --- REFINED INPUTS --- */
+/* Input form */
 .custom-input {
     /* Adding a subtle border so inputs don't disappear into the linen background */
     background-color: rgba(255, 255, 255, 0.8) !important;
@@ -268,7 +276,8 @@ section#events {
     background: #ffffff;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
-    width: 100%; /* Ensure it fills the grid column */
+    /* Ensure it fills the grid column */
+    width: 100%; 
     
     /* Animation initial state */
     opacity: 0;
@@ -308,77 +317,48 @@ section#events {
 }
 
 
-/* 6. CONTACT & FOOTER (JUSTIFIED LEFT) */
+/* Contect and Footer */
 
+/*footer*/
+.opening-table {
+    background-color: transparent;
+}
 #contact {
-    background-color: var(--primary-color) !important; 
-    color: #ffffff !important;
-    padding: 60px 0;
+    background-color: var(--primary-color);
+    color: white;
+    padding-bottom: 3rem;
 }
 
-#contact .section-title {
-    color: #ffffff !important;
-    font-size: 3.2rem !important;
+#contact h2 {
+    color: white;
 }
 
-.hours-container {
-    max-width: 320px; 
-    width: 100%;
+#contact .sub-heading-color {
+    color: var(--highlight-color);
 }
 
-.hours-list {
-    list-style: none;
-    padding: 0;
+#contact i {
+    color: var(--highlight-color);
+    font-size: 1.2rem;
+    margin-right: 15px;
 }
 
-.hours-list li {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 6px 0 !important;
+#contact .social-links i {
+    color: white;
+    font-size: 1.9rem;
+    -webkit-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
 }
 
-.contact-detail i {
-    color: var(--highlight-color) !important;
-    width: 28px;
+#contact .social-links i:hover {
+    color: var(--highlight-hover);
 }
 
-.social-icons-row {
-    margin-top: 25px;
-    display: flex;
-    gap: 20px;
+#contact .table-dark * {
+    background-color: transparent;
 }
 
-.social-icons-row a i {
-    color: #ffffff !important;
-    font-size: 1.5rem;
-    transition: 0.3s ease;
-}
-
-.social-icons-row a:hover i {
-    color: var(--highlight-color) !important;
-    transform: translateY(-3px);
-}
-/* Add space between individual contact lines */
-.contact-detail {
-    margin-bottom: 1rem; /* Adjust this for more/less space */
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between the icon and the text */
-}
-
-/* Add space between the text and the social icons row */
-.social-icons-row {
-    margin-top: 2rem; 
-    display: flex;
-    gap: 20px;
-}
-
-/* Add space between the rows in the opening hours list */
-.hours-list li {
-    padding: 0.8rem 0; /* Adds vertical space to each row */
-    border-bottom: 1px solid rgba(255,255,255,0.1); /* Optional: adds a thin line between days */
-}
 
 /* Media queries */
 
@@ -432,8 +412,7 @@ section#events {
         line-height: 1.2;
     }
 
-    /* You might also want to shrink the hero section height slightly on mobile 
-       so the user can see there is content below the fold */
+    /* Hero section height slightly on mobile */
     .hero-section {
         min-height: 80vh; 
     }
