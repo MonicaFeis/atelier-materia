@@ -173,10 +173,19 @@ footer {
 /* Events*/
 /* Event Title */
 .event-title {
-    font-size: 2.5rem;
+    font-size: 1.9rem;
     font-weight: 500;
     color: var(--primary-color);
+    line-height: 1.3;
 }
+
+
+/* Event image */
+.event-img img {
+    max-height: 300px;
+    object-fit: cover;
+}
+
 
 /* Special Offer Text */
 .special-offer-text {
