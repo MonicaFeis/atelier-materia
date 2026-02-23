@@ -454,13 +454,469 @@ section#events {
     }
 }
 
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap');
+
+
+/* Color Variables */
+:root {
+    --primary-color: #4B2E3F;         /* Deep Plum */
+    --highlight-color: #C49A6C;       /* Warm Clay */
+    --highlight-hover: #b5835a;      
+    --background-light: #F8F6F3;     
+    --text-dark: #2D2D2D;            
+    --font-handwritten: 'Great Vibes', cursive;
+    --font-sans: 'Montserrat', sans-serif;
+}
+
+/* Global Style */
+body {
+    font-family: var(--font-sans);
+    padding-top: 70px; 
+    overflow-x: hidden;
+}
+
+h2, h3, .section-title {
+    font-family: var(--font-handwritten) !important;
+    color: var(--primary-color);
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+/* Required to tell the browser the page is at least full-screen */
+html, body {
+    height: 100%; 
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    display: flex;
+    /* Stacks header, main, and footer vertically */
+    flex-direction: column;
+    /* Ensures the body is at least the height of the viewport */
+    min-height: 100vh; 
+    font-family: var(--font-sans);
+    padding-top: 70px; 
+    overflow-x: hidden;
+}
+
+.section {
+    padding-top: 4rem;
+}
+
+/* This targets the content between your nav and footer */
+/* This "pushes" the footer down by taking up all available empty space */
+main {
+    flex: 1 0 auto; 
+}
+
+/* Prevents the footer from squishing */
+footer {
+    flex-shrink: 0; 
+}
+
+/* Navbar*/
+.navbar {
+    background-color: var(--primary-color) !important; 
+    padding: 10px 0;
+}
+
+.logo {
+    height: 35px !important; 
+    width: auto !important;
+    transition: 0.3s ease;
+}
+
+.btn-book, .btn-hero, .btn-discover, .activity-card .btn {
+    background-color: var(--highlight-color) !important; 
+    color: white !important;
+    border-radius: 8px !important;
+    padding: 10px 25px !important;
+    font-weight: 500;
+    border: none !important;
+    transition: 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-book:hover, .btn-hero:hover, .btn-discover:hover {
+    background-color: var(--highlight-hover) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Hero section */
+
+.hero-section {
+    min-height: 100vh;
+    width: 100%;
+    
+    /* Update the URL here to match your new filename */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('../images/jessica-ruscello-G8vPQ-XVxxY-unsplash.jpg') center/cover no-repeat;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    
+    /* Pull the section up so the image starts behind the navbar */
+    margin-top: -70px; 
+}
+
+
+.hero-title {
+    font-family: var(--font-handwritten) !important;
+    /* clamp(minimum, preferred, maximum) */
+    font-size: clamp(3rem, 10vw, 6.5rem); 
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    /* Adds a subtle shadow to make text pop against the background image */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*Activites cards container */
+.activity-card .card-body {
+    display: flex;
+    flex-direction: column;
+    /*Ensure the body filled the card */
+    height: 100%;
+}
+
+.activity-card .card-text {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+/*Ensure the list and button stay at bottom*/
+.activity-card .list-group {
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+/*Booking section */
+/*The Bottom Layer (The Pottery Image) */
+.booking-section {
+    background-image: url('../images/warion-taipei-8QIAj5tHDdc-unsplash.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 1rem 2rem 1rem;
+    margin-top: -76px;
+}
+
+.booking-section .container {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+
+}
+
+.booking-section .row {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* The Middle Layer (The Soft Transparent Box) */
+.booking-form-wrapper {
+    background: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    padding: 25px 15px;
+    border-radius: 15px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.booking-notice {
+    color: white;
+    font-weight: 500; 
+}
+
+/*Booking form label */
+.booking-section .form-label {
+    color: #4B2E3F !important;
+    font-weight: 600;
+    display: block; 
+    text-align: left; 
+}
+
+/* Input form */
+.custom-input {
+    /* Adding a subtle border so inputs don't disappear into the linen background */
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    border: 1px solid rgba(75, 46, 63, 0.2) !important;
+    color: #2D2D2D !important;
+}
+
+
+/* Button scaling */
+.btn-book {
+    padding: 12px !important;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Events*/
+/* Event Title */
+.event-title {
+    font-size: 1.9rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    line-height: 1.3;
+}
+
+
+/* Event image */
+.event-img img {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+
+/* Special Offer Text */
+.special-offer-text {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* Features list icon spacing */
+ul.list-unstyled li i {
+    font-size: 0.9rem;
+}
+
+/* Section padding and responsive adjustments */
+section#events {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+/*Gallery page */
+
+/* Push page below fixed navbar */
+.gallery-page {
+    padding-top: 100px; /* safer for Bootstrap navbar */
+    background-color: #faf8f6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make footer stay at bottom */
+.gallery-page footer {
+    margin-top: auto;
+}
+
+/* Page header */
+
+.gallery-page .page-header {
+    padding: 4rem 0 2rem 0;
+}
+
+.gallery-page .section-title {
+    font-family: var(--font-handwritten);
+    font-size: 3rem;
+    color: #4B2E3F;
+    letter-spacing: 1px;
+}
+
+
+/* Gallery style*/
+
+#gallery {
+    padding-bottom: 5rem;
+}
+
+/* Ensure the Bootstrap column behaves correctly with the animation */
+#gallery .col {
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    /* Ensure it fills the grid column */
+    width: 100%; 
+    
+    /* Animation initial state */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto; 
+    display: block;
+    transition: transform 0.5s ease, filter 0.4s ease;
+}
+
+/* Hover effects */
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.05);
+    filter: brightness(92%);
+}
+
+/* Staggered Animation Delays */
+.gallery-item:nth-child(1) { animation-delay: 0.1s; }
+.gallery-item:nth-child(2) { animation-delay: 0.2s; }
+.gallery-item:nth-child(3) { animation-delay: 0.3s; }
+.gallery-item:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Contect and Footer */
+
+/*footer*/
+.opening-table {
+    background-color: transparent;
+}
+#contact {
+    background-color: var(--primary-color);
+    color: white;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+}
+
+#contact h2 {
+    color: white;
+}
+
+#contact .sub-heading-color {
+    color: var(--highlight-color);
+}
+
+#contact i {
+    color: var(--highlight-color);
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+#contact .social-links i {
+    color: white;
+    font-size: 1.9rem;
+    -webkit-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+
+#contact .social-links i:hover {
+    color: var(--highlight-hover);
+}
+
+#contact .table-dark * {
+    background-color: transparent;
+}
+
+
+
+
+/* Media queries */
+
+/* Small screens and up */
+@media screen and (min-width: 576px) {
+    /* increase font size in events table when screen size is large enough */
+    #events .table {
+        font-size: 1rem;
+    }
+    .student-discount {
+        font-size: 1rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    /* Make all service cards the same height for consistency */
+    #services .card-body {
+        min-height: 191px;
+        }
+       .event-title {
+        font-size: 1.8rem;
+    }
+    .lead, .special-offer-text {
+        font-size: 0.95rem;
+    }
+    section#events {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .booking-section {
+        padding: 4rem 2rem;
+        min-height: 100vh;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+       
+    }
+    .booking-form-wrapper {
+        padding: 40px;
+        max-width: 700px;  
+        width: 100%;   
+    }
+}
+
+
+/* Large devices (small laptops, 992px and up) */
+@media screen and (min-width: 992px) {
+    /* Make all service cards the same height for consistency */
+    #services .card-body {
+        min-height: auto;
+    }
+        .lead {
+        font-size: 1rem;
+    }
+    .special-offer-text {
+        font-size: 1rem;
+    }
+    section#events {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+
+/* xl devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+    /* make all service cards the same height for consistency */
+    #services .card-body {
+        min-height: 220px;
+    }
+}
+
 /* xxl devices (larger desktops, 1400px and up) */
 @media screen and (min-width: 1400px) {
     /* make all service cards the same height for consistency */
     #services .card-body {
         min-height: 195px;
     }
-
+}
 
 @media screen and (max-width: 768px) {
     /* This makes the big title fit on tablets and phones */
@@ -474,19 +930,10 @@ section#events {
         min-height: 80vh; 
     }
 }
-}.example {
-    display: -ms-grid;
+
+.example {
     display: grid;
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
     transition: all .5s;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
-    background: -o-linear-gradient(top, white, black);
+    user-select: none;
     background: linear-gradient(to bottom, white, black);
 }
-
-
