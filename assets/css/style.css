@@ -99,11 +99,10 @@ footer {
 .hero-section {
     min-height: 100vh;
     width: 100%;
-    max-width: 1600px;
     
     /* Update the URL here to match your new filename */
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                url('../images/jessica-ruscello-G8vPQ-XVxxY-unsplash.jpg') center/cover no-repeat;
+                url('../images/jessica-ruscello-G8vPQ-XVxxY-unsplash-2.jpg') center/cover no-repeat;
     
     display: flex;
     flex-direction: column;
