@@ -50,7 +50,7 @@ body {
 }
 
 .section {
-    padding: 4rem;
+    padding-top: 4rem;
 }
 
 /* This targets the content between your nav and footer */
