@@ -99,6 +99,7 @@ footer {
 .hero-section {
     min-height: 100vh;
     width: 100%;
+    max-width: 1600px;
     
     /* Update the URL here to match your new filename */
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
@@ -260,6 +261,10 @@ section#events {
 /* Make footer stay at bottom */
 .gallery-page footer {
     margin-top: auto;
+}
+
+.gallery-item {
+    max-width: 1000px;
 }
 
 /* Page header */
