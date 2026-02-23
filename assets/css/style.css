@@ -49,6 +49,10 @@ body {
     overflow-x: hidden;
 }
 
+.section {
+    padding: 4rem;
+}
+
 /* This targets the content between your nav and footer */
 /* This "pushes" the footer down by taking up all available empty space */
 main {
