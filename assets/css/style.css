@@ -106,6 +106,9 @@ h2, h3, .section-title {
     align-items: center;
     text-align: center;
     color: #fff;
+    /*helps the browser prioritize loading the hero image for better performance */
+    content-visibility: auto;
+    contain-intrinsic-size: 100vh;
 
     /* Pulls image up under the navbar */
     margin-top: -76px;  
