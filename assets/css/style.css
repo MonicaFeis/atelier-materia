@@ -255,7 +255,7 @@ footer {
         /* This creates the Pinterest columns without complex math */ 
         column-count: 1; 
         column-gap: 20px; 
-        padding: 20px; 
+        padding: 20px 20px 0 20px;; 
     } 
     
     .gallery-item { 
@@ -279,6 +279,7 @@ footer {
     .gallery-img { 
         width: 100%; 
         height: auto; 
+        display: block;
         
     /* Keeps the original aspect ratio */ 
     display: block;
