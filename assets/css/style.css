@@ -27,31 +27,44 @@ body {
     font-family: var(--font-sans);
     padding-top: 70px; 
     overflow-x: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     min-height: 100vh;
+    color: var(--text-dark); /* Ensure default text is readable */
 }
 
-.section {
-    padding-top: 4rem;
-}
+.section { padding-top: 4rem; }
 
-/* Main content stretch */
+/* Main content stretch for Accessibility Landmarks */
 main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
     flex: 1 0 auto; 
 }
 
 /* Footer prevent squish */
 footer {
+    -ms-flex-negative: 0;
     flex-shrink: 0; 
 }
 
-/* Headings */
-h2, h3, .section-title {
+/* Headings - Adjusted for Hierarchy Accessibility */
+h2, .section-title {
     font-family: var(--font-handwritten) !important;
     color: var(--primary-color);
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 8vw, 3.5rem); /* Responsive sizing */
     font-weight: 400;
+}
+
+h3 {
+    font-family: var(--font-sans);
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
 /* Navbar */
@@ -63,53 +76,63 @@ h2, h3, .section-title {
 .logo {
     height: 35px !important; 
     width: auto !important;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
     transition: 0.3s ease;
 }
 
-/* Buttons */
+/* Buttons - ACCESSIBILITY FIX: Contrast Shadow */
 .btn-book, .btn-hero, .btn-discover, .activity-card .btn {
     background-color: var(--highlight-color) !important; 
     color: white !important;
     border-radius: 8px !important;
     padding: 10px 25px !important;
-    font-weight: 500;
+    font-weight: 600; /* Bolder for legibility */
     border: none !important;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
     transition: 0.3s ease;
     text-decoration: none;
     display: inline-block;
+    /* Subtle shadow helps text pass WCAG contrast checks on tan background */
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4); 
 }
 
 .btn-book:hover, .btn-hero:hover, .btn-discover:hover {
     background-color: var(--highlight-hover) !important;
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
     transform: translateY(-2px);
+    -webkit-box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.btn-book {
-    padding: 12px !important;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 /* Hero section */
 .hero-section {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), 
+                url('../images/hero-jessica-ruscello.webp') center/cover no-repeat;
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('../images/hero-jessica-ruscello.webp') center/cover no-repeat;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
                 url('../images/hero-jessica-ruscello.webp') center/cover no-repeat;
-    
     min-height: 100vh; 
     width: 100%;
-    
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     text-align: center;
     color: #fff;
-
-    /* Pulls image up under the navbar */
     margin-top: -76px;  
-    /* Pushes text down so it's not hidden */
     padding-top: 100px; 
     padding-bottom: 50px; 
 }
@@ -120,244 +143,96 @@ h2, h3, .section-title {
     line-height: 1.1;
     margin-bottom: 1.5rem;
     text-shadow: 2px 2px 15px rgba(0,0,0,0.4);
-    /* Prevents text from hitting screen edges on mobile */
     max-width: 90%; 
 }
 
-/* Activity Cards */
-.activity-card .card-body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.activity-card .card-text {
-    flex-grow: 1;
-    margin-bottom: 1.5rem;
-}
-
-.activity-card .list-group {
-    margin-top: auto;
-    margin-bottom: 15px;
-}
-
 /* Booking Section */
-/* --- BOOKING SECTION OPTIMIZED --- */
 .booking-section {
-    /* 1. Use your new optimized WebP image */
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.4)), to(rgba(0,0,0,0.4))), 
                 url('../images/warion-taipei-8QIAj5tHDdc-unsplash.webp') center/cover no-repeat;
-    
-    /* 2. Standardize heights and centering */
+    background: -o-linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('../images/warion-taipei-8QIAj5tHDdc-unsplash.webp') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('../images/warion-taipei-8QIAj5tHDdc-unsplash.webp') center/cover no-repeat;
     min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    justify-content: center;
     padding: 100px 1rem 40px 1rem;
-    margin-top: -70px; /* Pulls section under the navbar */
 }
 
-/* Remove unnecessary padding from Bootstrap containers to keep the form centered */
-.booking-section .container,
-.booking-section .row {
-    padding-top: 0;
-    margin-top: 0;
-}
-
-/* --- Form Wrapper (Glassmorphism Effect) --- */
 .booking-form-wrapper {
-    background: rgba(255, 255, 255, 0.15); /* Lighter for better performance */
+    background: rgba(255, 255, 255, 0.15); 
     backdrop-filter: blur(12px); 
-    -webkit-backdrop-filter: blur(12px); /* Safari support */
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 35px 25px; /* Slightly more breathing room */
+    padding: 35px;
     border-radius: 20px;
-    max-width: 650px; /* Slightly tighter for a professional look */
-    width: 100%;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.booking-notice {
-    color: #ffffff;
-    font-weight: 500;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-
-/* Labels and Inputs */
-.booking-section .form-label {
-    color: #ffffff; /* White labels look better on dark glass backgrounds */
-    font-weight: 600;
-    display: block;
-    text-align: left;
-    margin-bottom: 0.5rem;
+    -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .custom-input {
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #2D2D2D;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border: 2px solid transparent;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
 .custom-input:focus {
-    background-color: #ffffff;
-    box-shadow: 0 0 0 4px rgba(196, 154, 108, 0.2); /* Highlight color glow */
     border-color: var(--highlight-color);
-}
-/* Events */
-.event-title {
-    font-size: 1.9rem;
-    font-weight: 500;
-    color: var(--primary-color);
-    line-height: 1.3;
+    -webkit-box-shadow: 0 0 0 0.25rem rgba(196, 154, 108, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(196, 154, 108, 0.25);
 }
 
-.event-img img {
-    max-height: 300px;
-    object-fit: cover;
-}
-
-.special-offer-text {
-    color: var(--primary-color);
-    font-weight: 500;
-    font-size: 1.1rem;
-}
-
-ul.list-unstyled li i {
-    font-size: 0.9rem;
-}
-
-section#events {
-    padding: 4rem 0;
-}
-
-/*Gallery*/
-.gallery-page .page-header {
-    padding-top: 130px; 
-    padding-bottom: 20px;
-    background-color: var(--background-light);
-}
-
-.gallery-page .page-header .section-title {
-    margin-bottom: 0;
-    font-size: 4rem;
-    color: var(--primary-color);
-}
-/* -- Masonry Style -- */
+/* Gallery - Masonry */
 .gallery-wrapper {
-    /* This creates the Pinterest columns without complex math */
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
     column-count: 1; 
+    -webkit-column-gap: 20px; 
+    -moz-column-gap: 20px; 
     column-gap: 20px;
     padding: 20px;
 }
 
 .gallery-item {
-    /* Critical for masonry: prevents images from breaking between columns */
     display: inline-block; 
     width: 100%;
     margin-bottom: 20px;
     border-radius: 15px;
     overflow: hidden;
-    background: #fff;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    /* Simple hover effect - very beginner friendly */
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
     transition: transform 0.3s ease;
 }
 
 .gallery-item:hover {
-    transform: scale(1.02);
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
 }
 
-.gallery-img {
-    width: 100%;
-    height: auto; /* Keeps the original aspect ratio */
-    display: block;
-}
-
-/* Contact / Footer */
+/* Footer & Socials */
 #contact {
     background-color: var(--primary-color);
     color: white;
-    padding: 4rem 0 3rem 0;
+    padding: 4rem 0 2rem 0;
 }
 
-#contact h2 { color: white; }
-#contact .sub-heading-color { color: var(--highlight-color); }
-#contact i { color: var(--highlight-color); font-size: 1.2rem; margin-right: 15px; }
-#contact .social-links i {
-    color: white;
-    font-size: 1.9rem;
-    transition: color 0.3s ease-in-out;
-}
-#contact .social-links i:hover { color: var(--highlight-hover); }
-#contact .table-dark * { background-color: transparent; }
+#contact i { color: var(--highlight-color); }
 
 /* Media Queries */
-
-
-/* Small devices */
-@media screen and (min-width: 576px) {
-    #events .table, .student-discount { font-size: 1rem; }
-}
-
-/* Medium devices */
 @media screen and (min-width: 768px) {
-/*Scolling Performance Fix for Mobile*/
-        .booking-section, .hero-section {
-        /* This prevents "Jank" or laggy scrolling on mobile */
-        background-attachment: scroll;
-}
-    /* Services Card Fix */
-    #services .card-body { 
-        min-height: 191px; 
-    }
-
-    /* Typography Adjustments */
-    .event-title { font-size: 1.8rem; }
-    .lead, .special-offer-text { font-size: 0.95rem; }
-
-    /* Section Padding */
-    section#events { padding: 2.5rem 0; }
-
-    /* Booking Layout for Desktop */
-    .booking-section { 
-        padding: 4rem 2rem; 
-        min-height: 100vh; 
-        display: flex; 
-        align-items: center; 
-        justify-content: center;
-        /* PERFORMANCE: Keep fixed background only for desktop */
-        background-attachment: fixed; 
-    }
-
-    .booking-form-wrapper { 
-        padding: 40px; 
-        max-width: 700px; 
-        width: 100%; 
-    }
-    .gallery-wrapper {
-        column-count: 2;
-    }
+    .gallery-wrapper { column-count: 2; }
+    .hero-section, .booking-section { background-attachment: fixed; }
 }
 
-/* Large devices */
-@media screen and (min-width: 992px) {
-    #services .card-body { min-height: auto; }
-    .lead, .special-offer-text { font-size: 1rem; }
-    section#events { padding: 3rem 0; }
-}
-
-/* Extra Large */
 @media screen and (min-width: 1200px) {
-    #services .card-body { min-height: 220px; 
-    .gallery-wrapper {
-        column-count: 4;
-    }
-}
-}
-
-/* XXL */
-@media screen and (min-width: 1400px) {
-    #services .card-body { min-height: 195px; }
+    .gallery-wrapper { column-count: 4; }
 }
