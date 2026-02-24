@@ -94,10 +94,9 @@ h2, h3, .section-title {
 
 /* Hero section */
 .hero-section {
-    min-height: 100vh;
-    width: 100%;
+    /* Change the end from .jpg to .webp */
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                url('../images/hero-jessica-ruscello.jpg') center/cover no-repeat;
+                url('../images/hero-jessica-ruscello.webp') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -133,52 +132,68 @@ h2, h3, .section-title {
 }
 
 /* Booking Section */
+/* --- BOOKING SECTION OPTIMIZED --- */
 .booking-section {
-    background-image: url('../images/warion-taipei-8QIAj5tHDdc-unsplash.jpg') !important;
-    background-size: cover;
-    background-position: center;
+    /* 1. Use your new optimized WebP image */
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url('../images/warion-taipei-8QIAj5tHDdc-unsplash.webp') center/cover no-repeat;
+    
+    /* 2. Standardize heights and centering */
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 100px 1rem 2rem 1rem;
-    margin-top: -76px;
+    padding: 100px 1rem 40px 1rem;
+    margin-top: -70px; /* Pulls section under the navbar */
 }
 
+/* Remove unnecessary padding from Bootstrap containers to keep the form centered */
 .booking-section .container,
 .booking-section .row {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
+    padding-top: 0;
+    margin-top: 0;
 }
 
+/* --- FORM WRAPPER (Glassmorphism Effect) --- */
 .booking-form-wrapper {
-    background: rgba(255,255,255,0.2) !important;
-    backdrop-filter: blur(10px); 
-    border: 1px solid rgba(255,255,255,0.3);
-    padding: 25px 15px;
-    border-radius: 15px;
-    max-width: 700px;
+    background: rgba(255, 255, 255, 0.15); /* Lighter for better performance */
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 35px 25px; /* Slightly more breathing room */
+    border-radius: 20px;
+    max-width: 650px; /* Slightly tighter for a professional look */
     width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .booking-notice {
-    color: white;
+    color: #ffffff;
     font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
+/* Labels and Inputs */
 .booking-section .form-label {
-    color: #4B2E3F !important;
+    color: #ffffff; /* White labels look better on dark glass backgrounds */
     font-weight: 600;
     display: block;
     text-align: left;
+    margin-bottom: 0.5rem;
 }
 
 .custom-input {
-    background-color: rgba(255,255,255,0.8) !important;
-    border: 1px solid rgba(75,46,63,0.2) !important;
-    color: #2D2D2D !important;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #2D2D2D;
+    transition: all 0.3s ease;
 }
 
+.custom-input:focus {
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(196, 154, 108, 0.2); /* Highlight color glow */
+    border-color: var(--highlight-color);
+}
 /* Events */
 .event-title {
     font-size: 1.9rem;
@@ -206,76 +221,47 @@ section#events {
     padding: 4rem 0;
 }
 
-/* Gallery */
-.gallery-page {
-    padding-top: 100px;
-    background-color: #faf8f6;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.gallery-page footer {
-    margin-top: auto;
-}
-
+/*Gallery*/
 .gallery-page .page-header {
-    padding: 4rem 0 2rem 0;
+    padding-top: 130px; 
+    padding-bottom: 20px;
+    background-color: var(--background-light);
 }
 
-.gallery-page .section-title {
-    font-family: var(--font-handwritten);
-    font-size: 3rem;
+.gallery-page .page-header .section-title {
+    margin-bottom: 0;
+    font-size: 4rem;
     color: var(--primary-color);
-    letter-spacing: 1px;
 }
-
-#gallery {
-    padding-bottom: 5rem;
-}
-
-#gallery .col {
-    display: flex;
-    flex-direction: column;
+/* -- Masonry Style -- */
+.gallery-wrapper {
+    /* This creates the Pinterest columns without complex math */
+    column-count: 1; 
+    column-gap: 20px;
+    padding: 20px;
 }
 
 .gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 18px;
-    background: #fff;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    /* Critical for masonry: prevents images from breaking between columns */
+    display: inline-block; 
     width: 100%;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.8s ease forwards;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    /* Simple hover effect - very beginner friendly */
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
 }
 
 .gallery-img {
     width: 100%;
-    height: auto;
+    height: auto; /* Keeps the original aspect ratio */
     display: block;
-    transition: transform 0.5s ease, filter 0.4s ease;
-}
-
-.gallery-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-}
-
-.gallery-item:hover .gallery-img {
-    transform: scale(1.05);
-    filter: brightness(92%);
-}
-
-.gallery-item:nth-child(1) { animation-delay: 0.1s; }
-.gallery-item:nth-child(2) { animation-delay: 0.2s; }
-.gallery-item:nth-child(3) { animation-delay: 0.3s; }
-.gallery-item:nth-child(4) { animation-delay: 0.4s; }
-
-@keyframes fadeUp {
-    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Contact / Footer */
@@ -298,11 +284,6 @@ section#events {
 
 /* Media Queries */
 
-/* Small screens */
-@media screen and (max-width: 768px) {
-    .hero-title { font-size: 3.5rem !important; line-height: 1.2; }
-    .hero-section { min-height: 80vh; }
-}
 
 /* Small devices */
 @media screen and (min-width: 576px) {
@@ -311,12 +292,42 @@ section#events {
 
 /* Medium devices */
 @media screen and (min-width: 768px) {
-    #services .card-body { min-height: 191px; }
+/*Scolling Performance Fix for Mobile*/
+        .booking-section, .hero-section {
+        /* This prevents "Jank" or laggy scrolling on mobile */
+        background-attachment: scroll;
+}
+    /* Services Card Fix */
+    #services .card-body { 
+        min-height: 191px; 
+    }
+
+    /* Typography Adjustments */
     .event-title { font-size: 1.8rem; }
     .lead, .special-offer-text { font-size: 0.95rem; }
+
+    /* Section Padding */
     section#events { padding: 2.5rem 0; }
-    .booking-section { padding: 4rem 2rem; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
-    .booking-form-wrapper { padding: 40px; max-width: 700px; width: 100%; }
+
+    /* Booking Layout for Desktop */
+    .booking-section { 
+        padding: 4rem 2rem; 
+        min-height: 100vh; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        /* PERFORMANCE: Keep fixed background only for desktop */
+        background-attachment: fixed; 
+    }
+
+    .booking-form-wrapper { 
+        padding: 40px; 
+        max-width: 700px; 
+        width: 100%; 
+    }
+    .gallery-wrapper {
+        column-count: 2;
+    }
 }
 
 /* Large devices */
@@ -328,7 +339,11 @@ section#events {
 
 /* Extra Large */
 @media screen and (min-width: 1200px) {
-    #services .card-body { min-height: 220px; }
+    #services .card-body { min-height: 220px; 
+    .gallery-wrapper {
+        column-count: 4;
+    }
+}
 }
 
 /* XXL */
