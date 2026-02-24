@@ -94,15 +94,12 @@ h2, h3, .section-title {
 
 /* Hero section */
 .hero-section {
-    /* Background */
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
                 url('../images/hero-jessica-ruscello.webp') center/cover no-repeat;
     
-    /* Forces section to take up the full screen height */
     min-height: 100vh; 
     width: 100%;
     
-    /* Centering Logic */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,9 +107,11 @@ h2, h3, .section-title {
     text-align: center;
     color: #fff;
 
-    /* Navbar Offset */
-    margin-top: -76px; /* Pulls hero behind the transparent navbar */
-    padding-top: 76px;  /* Pushes content down so it's not covered by navbar */
+    /* Pulls image up under the navbar */
+    margin-top: -76px;  
+    /* Pushes text down so it's not hidden */
+    padding-top: 100px; 
+    padding-bottom: 50px; 
 }
 
 .hero-title {
