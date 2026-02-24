@@ -315,9 +315,9 @@ footer {
         color: var(--highlight-hover); 
     } 
     
-    #contact .table-dark  { 
-        background-color: transparent;
-     } 
+   #contact .table-dark * {
+    background-color: transparent;
+}
      
      /* Media Queries */
     /* Small devices */ 
