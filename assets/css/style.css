@@ -183,29 +183,6 @@ h2, h3, .section-title {
     text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
-/* --Accessibility & Layout Refinements-- */
-
-.btn-book {
-    background-color: #bd9a7a; 
-    color: #000000 !important; /* This overrides previous text colors to fix contrast */
-    font-weight: 700;
-    border: none;
-    transition: all 0.3s ease;
-    padding: 12px 30px;
-}
-
-.btn-book:hover {
-    background-color: #a68566;
-    color: #000000 !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.custom-input:focus, 
-.btn-book:focus {
-    outline: 3px solid rgba(189, 154, 122, 0.5);
-    outline-offset: 2px;
-}
 
 /* Labels and Inputs */
 .booking-section .form-label {
