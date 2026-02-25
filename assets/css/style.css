@@ -178,49 +178,51 @@ h3.sub-heading-color {
 }
 
 /* Booking Section */ 
-/* --- BOOKING SECTION OPTIMIZED --- */ 
+/* --- BOOKING SECTION CENTERING --- */ 
 .booking-section { 
-    /* 1. Use your new optimized WebP image */ 
+    /* Use your optimized WebP image */ 
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
     url('../images/warion-taipei-8QIAj5tHDdc-unsplash.webp') center/cover no-repeat;
     
-    /* 2. Standardize heights and centering */ 
+    /* Crucial for centering */ 
     min-height: 100vh; 
+    width: 100%;
     display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    padding: 100px 1rem 40px 1rem; 
-    margin-top: -70px; 
-    /* Pulls section under the navbar */
-   } 
- /* Remove unnecessary padding from Bootstrap containers to keep the form centered */ 
- .booking-section .container, 
- .booking-section .row { 
-    padding-top: 0; 
-    margin-top: 0;
- } 
- 
- /* --- Form Wrapper (Glassmorphism Effect) --- */ 
- .booking-form-wrapper {
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+    
+    /* Adjust padding to account for fixed navbar height if necessary */
+    padding-top: 80px; 
+    padding-bottom: 40px;
+} 
+
+/* Ensure the Bootstrap container within the section doesn't force a left-align */
+.booking-section .container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Force the Row to center its columns */
+.booking-section .row {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Glassmorphism Wrapper */ 
+.booking-form-wrapper {
      background: rgba(255, 255, 255, 0.15); 
-     /* Lighter for better performance */ 
      backdrop-filter: blur(12px); 
      -webkit-backdrop-filter: blur(12px); 
-     /* Safari support */ 
      border: 1px solid rgba(255, 255, 255, 0.2); 
      padding: 35px 25px;
-     /* Slightly more breathing room */ 
      border-radius: 20px; 
      max-width: 650px; 
-     /* Slightly tighter for a professional look */ 
      width: 100%; 
      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
-    } 
-    .booking-notice { 
-        color: #ffffff; 
-        font-weight: 500; 
-        text-shadow: 0 2px 4px rgba(0,0,0,0.2); 
-    } 
+     /* Ensure margins don't interfere with flex centering */
+     margin: 0 auto;
+}
     
     /* Labels and Inputs */ 
     .booking-section .form-label { 
