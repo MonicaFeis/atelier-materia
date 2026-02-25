@@ -145,6 +145,11 @@ footer {
     margin-top: auto; 
     margin-bottom: 15px; 
 } 
+.activity-card img {
+    height: 220px;       /* choose your preferred height */
+    object-fit: cover;   /* prevents squeezing */
+}
+
 /* Booking Section */ 
 /* --- BOOKING SECTION OPTIMIZED --- */ 
 .booking-section { 
