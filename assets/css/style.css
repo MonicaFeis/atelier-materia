@@ -225,6 +225,10 @@ h3.sub-heading-color {
     transition: 0.3s;
 }
 
+#contact .social-links i:hover {
+    color: var(--secondary-color);
+}
+
 #contact .table-dark * { background-color: transparent; }
 
 /* Media Queries */
