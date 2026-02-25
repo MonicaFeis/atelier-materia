@@ -262,18 +262,18 @@ footer {
     } 
     
     .gallery-item { 
-        /* Critical for masonry: prevents images from breaking between columns */ 
-        display: inline-block; 
-        width: 100%; 
-        margin-bottom: 20px; 
-        border-radius: 15px; 
-        overflow: hidden; 
-        background: #fff; 
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
-        
-        /* Simple hover effect*/ 
-        transition: transform 0.3s ease; 
-    } 
+    display: inline-block; 
+    width: 100%; 
+    margin-bottom: 20px; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    background: #fff; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    transition: transform 0.3s ease; 
+    
+    /* ADD THIS LINE */
+    break-inside: avoid; 
+}
     
     .gallery-item:hover { 
         transform: scale(1.02); 
@@ -379,13 +379,13 @@ footer {
         
     /* Extra Large */ 
     @media screen and (min-width: 1200px) { 
-        #services .card-body { 
-            min-height: 220px
-        } 
-            .gallery-wrapper { 
-                column-count: 4; 
-            } 
-        } 
+    #services .card-body { 
+        min-height: 220px; 
+    } 
+    .gallery-wrapper { 
+        column-count: 4; 
+    } 
+}
     
     /* Extra Extra Large */ 
     @media screen and (min-width: 1400px) { 
