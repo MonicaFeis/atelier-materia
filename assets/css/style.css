@@ -189,6 +189,12 @@ h3.event-title {
 }
 
 /* Footer / Contact */
+#contact { 
+    background-color: var(--primary-color); 
+    color: white; 
+    padding: 4rem 0 3rem 0;
+    width:100%;
+}
 #contact h2 { 
     font-family: var(--font-handwritten) !important; 
     color: white; 
