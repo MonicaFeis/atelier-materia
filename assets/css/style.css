@@ -226,7 +226,7 @@ h3.sub-heading-color {
 }
 
 #contact .social-links i:hover {
-    color: var(--secondary-color);
+    color: var(--highlight-hover);
 }
 
 #contact .table-dark * { background-color: transparent; }
