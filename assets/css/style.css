@@ -27,18 +27,23 @@ body {
     font-family: var(--font-sans); 
     padding-top: 70px; 
     overflow-x: hidden; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
     display: flex; 
-    flex-direction: column; 
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+        -ms-flex-direction: column; 
+            flex-direction: column; 
     min-height: 100vh; 
 }
 
 .section { padding-top: 4rem; } 
 
 /* Main content stretch */ 
-main { flex: 1 0 auto; } 
+main { -webkit-box-flex: 1; -ms-flex: 1 0 auto; flex: 1 0 auto; } 
 
 /* Footer prevent squish */ 
-footer { flex-shrink: 0; } 
+footer { -ms-flex-negative: 0; flex-shrink: 0; } 
 
 /* Headings*/
 
@@ -95,6 +100,8 @@ h3.sub-heading-color {
 .logo { 
     height: 35px !important; 
     width: auto !important; 
+    -webkit-transition: 0.3s ease; 
+    -o-transition: 0.3s ease; 
     transition: 0.3s ease; 
 } 
 
@@ -106,6 +113,8 @@ h3.sub-heading-color {
     padding: 10px 25px !important; 
     font-weight: 500; 
     border: none !important; 
+    -webkit-transition: 0.3s ease; 
+    -o-transition: 0.3s ease; 
     transition: 0.3s ease; 
     text-decoration: none; 
     display: inline-block;
@@ -113,8 +122,11 @@ h3.sub-heading-color {
 
 .btn-book:hover, .btn-hero:hover, .btn-discover:hover { 
     background-color: var(--highlight-hover) !important; 
-    transform: translateY(-2px); 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    -webkit-transform: translateY(-2px); 
+        -ms-transform: translateY(-2px); 
+            transform: translateY(-2px); 
+    -webkit-box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 } 
 
 .btn-book { 
@@ -126,14 +138,27 @@ h3.sub-heading-color {
 
 /* Hero section */
 .hero-section { 
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), 
+    url('../images/hero-jessica-ruscello.webp') center/cover no-repeat; 
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+    url('../images/hero-jessica-ruscello.webp') center/cover no-repeat; 
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
     url('../images/hero-jessica-ruscello.webp') center/cover no-repeat;
     min-height: 100vh; 
     width: 100%; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
     display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+        -ms-flex-direction: column; 
+            flex-direction: column; 
+    -webkit-box-pack: center; 
+        -ms-flex-pack: center; 
+            justify-content: center; 
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center; 
     text-align: center; 
     color: #fff; 
     content-visibility: auto; 
@@ -152,8 +177,13 @@ h3.sub-heading-color {
 
 /* Activity Cards */ 
 .activity-card .card-body { 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
     display: flex; 
-    flex-direction: column; 
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+        -ms-flex-direction: column; 
+            flex-direction: column; 
     height: 100%; 
 } 
 
@@ -163,7 +193,9 @@ h3.sub-heading-color {
 }
 
 .activity-card .card-text { 
-    flex-grow: 1; 
+    -webkit-box-flex: 1; 
+        -ms-flex-positive: 1; 
+            flex-grow: 1; 
     margin-bottom: 1.5rem; 
 } 
 
@@ -174,20 +206,31 @@ h3.sub-heading-color {
 
 .activity-card img {
     height: 220px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 /* Booking Section */ 
 .booking-section { 
     /* 1. Use your new optimized WebP image */ 
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.3)), to(rgba(0,0,0,0.3))), 
+    url('../images/warion-taipei-8QIAj5tHDdc-unsplash.webp') center/cover no-repeat; 
+    background: -o-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+    url('../images/warion-taipei-8QIAj5tHDdc-unsplash.webp') center/cover no-repeat; 
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
     url('../images/warion-taipei-8QIAj5tHDdc-unsplash.webp') center/cover no-repeat;
     
     /* 2. Standardize heights and centering */ 
     min-height: 100vh; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
     display: flex; 
-    align-items: center; 
-    justify-content: center; 
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center; 
+    -webkit-box-pack: center; 
+        -ms-flex-pack: center; 
+            justify-content: center; 
     padding: 100px 1rem 40px 1rem; 
     margin-top: -70px; 
     /* Pulls section under the navbar */
@@ -213,7 +256,8 @@ h3.sub-heading-color {
      max-width: 650px; 
      /* Slightly tighter for a professional look */ 
      width: 100%; 
-     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+     -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
     } 
     .booking-notice { 
         color: #ffffff; 
@@ -233,12 +277,13 @@ h3.sub-heading-color {
     .custom-input { 
         background-color: rgba(255, 255, 255, 0.9); 
         border: 1px solid rgba(255, 255, 255, 0.3); 
-        color: #2D2D2D; transition: all 0.3s ease;
+        color: #2D2D2D; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease;
      } 
      
      .custom-input:focus { 
         background-color: #ffffff; 
-        box-shadow: 0 0 0 4px rgba(196, 154, 108, 0.2); 
+        -webkit-box-shadow: 0 0 0 4px rgba(196, 154, 108, 0.2); 
+                box-shadow: 0 0 0 4px rgba(196, 154, 108, 0.2); 
         
         /* Highlight color glow */ 
         border-color: var(--highlight-color); 
@@ -272,8 +317,12 @@ h3.event-title {
     .gallery-wrapper { 
         
         /* This creates the Pinterest columns without complex math */ 
-        column-count: 1; 
-        column-gap: 20px; 
+        -webkit-column-count: 1; 
+           -moz-column-count: 1; 
+                column-count: 1; 
+        -webkit-column-gap: 20px; 
+           -moz-column-gap: 20px; 
+                column-gap: 20px; 
         padding: 20px 20px 0 20px;; 
     } 
     
@@ -284,14 +333,25 @@ h3.event-title {
     border-radius: 15px; 
     overflow: hidden; 
     background: #fff; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    -webkit-box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    -webkit-transition: -webkit-transform 0.3s ease; 
+    transition: -webkit-transform 0.3s ease; 
+    -o-transition: transform 0.3s ease; 
     transition: transform 0.3s ease; 
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease; 
     
-    break-inside: avoid; 
+    -webkit-column-break-inside: avoid; 
+    
+       -moz-column-break-inside: avoid; 
+    
+            break-inside: avoid; 
 }
     
     .gallery-item:hover { 
-        transform: scale(1.02); 
+        -webkit-transform: scale(1.02); 
+            -ms-transform: scale(1.02); 
+                transform: scale(1.02); 
     } 
     
     .gallery-img { 
@@ -304,7 +364,9 @@ h3.event-title {
     } 
     
     .gallery-page {
-    flex: 1; 
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; 
     background-color: var(--background-light); 
 }
 
@@ -343,6 +405,8 @@ h3.sub-heading-color {
 #contact .social-links i { 
     color: white; 
     font-size: 1.9rem; 
+    -webkit-transition: 0.3s; 
+    -o-transition: 0.3s; 
     transition: 0.3s;
 }
 
@@ -355,9 +419,9 @@ h3.sub-heading-color {
 /* Media Queries */
 @media screen and (min-width: 768px) { 
     .booking-section, .hero-section { background-attachment: fixed; } 
-    .gallery-wrapper { column-count: 2; } 
+    .gallery-wrapper { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; } 
 } 
 
 @media screen and (min-width: 1200px) { 
-    .gallery-wrapper { column-count: 4; } 
+    .gallery-wrapper { -webkit-column-count: 4; -moz-column-count: 4; column-count: 4; } 
 }
