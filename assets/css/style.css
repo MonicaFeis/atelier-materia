@@ -11,10 +11,10 @@
         --font-sans: 'Montserrat', sans-serif; } 
         
 /* Global Style */
-html, body {
-    height: 100%;
+ html, body { 
+    height: 100%; 
     margin: 0;
-}
+ } 
 
  html { 
     scroll-behavior: smooth; 
@@ -25,13 +25,14 @@ html, body {
     font-family: var(--font-sans); 
     padding-top: 70px; 
     overflow-x: hidden; 
-}
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+    margin: 0;
 
-main.flex-shrink-0 {
-    flex: 1 0 auto;
 }
     
-.section { 
+    .section { 
     padding-top: 4rem; 
 } 
 
@@ -46,14 +47,12 @@ footer {
 } 
 
 /* Headings */
-.font-handwritten {
-    font-family: var(--font-handwritten), cursive !important;
-    color: var(--primary-color);
-    font-weight: 400;
-    /* Use clamp for fluid font sizing: min 2.5rem, grows with screen, max 4rem */
-    font-size: clamp(2.5rem, 8vw, 4rem);
-    line-height: 1.2;
-}
+ h2, h3, .section-title { 
+    font-family: var(--font-handwritten) !important; 
+    color: var(--primary-color); 
+    font-size: 3.5rem; 
+    font-weight: 400; 
+} 
 
 /* Navbar */
  .navbar { 
@@ -292,17 +291,18 @@ footer {
     .gallery-page {
     flex: 1; 
     background-color: var(--background-light); 
-    }
+}
 
     /* Contact / Footer */ 
-   #contact {
-    background-color: var(--primary-color);
-    color: white;
-   }
+    #contact { 
+        background-color: var(--primary-color); 
+        color: white; 
+        padding: 4rem 0 3rem 0; 
+    } 
     
-    #contact h2, #contact h4 {
-    color: white; /* Overrides global dark text for the dark background */
-}
+    #contact h2 { 
+        color: white; 
+    } 
     
     #contact .sub-heading-color { 
         color: var(--highlight-color); 
@@ -324,9 +324,8 @@ footer {
         color: var(--highlight-hover); 
     } 
     
-    .table-dark {
-    --bs-table-bg: transparent; /* Makes table blend into your plum background */
-    border-color: rgba(255, 255, 255, 0.1);
+   #contact .table-dark * {
+    background-color: transparent;
 }
      
      /* Media Queries */
