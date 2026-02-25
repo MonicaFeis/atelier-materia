@@ -40,7 +40,7 @@ main { flex: 1 0 auto; }
 /* Footer prevent squish */ 
 footer { flex-shrink: 0; } 
 
-/* --- HEADINGS --- */
+/* Headings*/
 
 /* Main Hero Title (Largest) */
 h1.hero-title { 
@@ -58,8 +58,9 @@ h1.hero-title {
     font-size: 3.5rem; 
     font-weight: 400; 
     margin-bottom: 2rem;
-} 
-
+    /* Prevents automatic uppercase transformation from h2, h3, h4 */
+    text-transform: none !important; 
+}
 /* Standard Montserrat Style (Default for h2, h3, h4) */
 /* This ensures the Hero Subtitle h2 stays clean */
 h2, h3, h4 {
@@ -178,29 +179,33 @@ h3.sub-heading-color {
 
 /* Event Title */
 h3.event-title {
-    font-family: var(--font-sans); /* Overrides any global handwriting */
+    font-family: var(--font-sans);
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.3;
     margin-bottom: 1rem;
-    text-transform: none; /* Keeps it as 'Mother's Day' instead of 'MOTHER'S DAY' */
+    text-transform: none; 
     color: var(--primary-color);
 }
 
 /* Footer / Contact */
-#contact { 
-    background-color: var(--primary-color); 
+#contact h2 { 
+    font-family: var(--font-handwritten) !important; 
     color: white; 
-    padding: 4rem 0 3rem 0; 
-} 
+    text-transform: none !important;
+    font-size: 3.5rem;
+    font-weight: 400;
+}
 
-#contact h2 { color: white; } 
+/* Subheadings for Contact info and Opening times */
 
-.sub-heading-color { 
-    color: var(--highlight-color); 
+h3.sub-heading-color { 
+    color: var(--highlight-color) !important; 
     font-size: 1.1rem;
-    margin-bottom: 1rem;
-} 
+    margin-bottom: 1.5rem;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+}
 
 #contact i { 
     color: var(--highlight-color); 
