@@ -59,45 +59,41 @@
                         <h2 class="section-title mb-2">Book Your Workshop</h2>
                         <p class="booking-notice mb-4">Confirm your spot within 24 hours.</p>
                         
-                         <form action="success.html" method="GET">
+                        <form action="success.html" method="GET">
                             <div class="row">
-                            <div class="col-12 col-lg-6 mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input class="form-control" id="name" name="name" type="text" placeholder="Jane Doe" required>
-                            </div>
-                            <div class="col-12 col-lg-6 mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input class="form-control" id="email" name="email" type="email" placeholder="jane@example.com" required>
-                            </div>
-                            <div class="col-12 col-lg-6 mb-3">
-                                <label for="phone" class="form-label">Phone number</label>
-                                <input class="form-control" id="phone" name="phone" type="tel" placeholder="01761254984" required>
-                            </div>
-
-                            <div class="col-12 col-lg-6 mb-3">
-                                <label for="event-type" class="form-label">Select Activity </label>
-                                <select id="event-type" class="form-select" name="event-type" required>
-                                    <option value="" disabled selected>Choose an experience...</option>
-                                    <option value="porcelain-painting">Porcelain Painting (€35)</option>
-                                    <option value="wheel-workshop">Wheel Workshop (€45)</option>
-                                    <option value="private-event">Private event (inquiry)</option>
-                                    <option value="seasonal-workshop">Seasonal Workshop (inquiry)</option>
-                                    <option value="upcoming-special">Mother’s Day Ceramic Experience</option>
-                                </select>
-                            </div>
-        
-                            <!--Improve the accessibility of the date input field -->
-                            <div class="mb-3">
-                            <label for="date-input" class="form-label">Preferred Date</label>
-                            <input type="date" id="date-input" class="form-control custom-input" required>
-                            </div>
-                            <div class="mb-4">
-                                <label for="message" class="form-label text-white">Message</label>
-                                <textarea id="message" name="message" class="form-control custom-input" rows="3" placeholder="Message to us"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-book mb-4 px-5">Submit</button>
-                    
-                            
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input class="form-control" id="name" name="name" type="text" placeholder="Jane Doe" required>
+                                </div>
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input class="form-control" id="email" name="email" type="email" placeholder="jane@example.com" required>
+                                </div>
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <label for="phone" class="form-label">Phone number</label>
+                                    <input class="form-control" id="phone" name="phone" type="tel" placeholder="01761254984" required>
+                                </div>
+                                <div class="col-12 col-lg-6 mb-3">
+                                    <label for="event-type" class="form-label">Select Activity</label>
+                                    <select id="event-type" class="form-select" name="event-type" required>
+                                        <option value="" disabled selected>Choose an experience...</option>
+                                        <option value="porcelain-painting">Porcelain Painting (€35)</option>
+                                        <option value="wheel-workshop">Wheel Workshop (€45)</option>
+                                        <option value="private-event">Private event (inquiry)</option>
+                                        <option value="seasonal-workshop">Seasonal Workshop (inquiry)</option>
+                                        <option value="upcoming-special">Mother’s Day Ceramic Experience</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-12 mb-3">
+                                    <label for="date-input" class="form-label">Preferred Date</label>
+                                    <input type="date" id="date-input" class="form-control custom-input" required>
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <label for="message" class="form-label text-white">Message</label>
+                                    <textarea id="message" name="message" class="form-control custom-input" rows="3" placeholder="Message to us"></textarea>
+                                </div>
+                            </div> <button type="submit" class="btn btn-book mb-4 px-5">Submit</button>
                         </form>
                     </div>
                 </div>
