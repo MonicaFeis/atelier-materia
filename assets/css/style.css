@@ -188,6 +188,59 @@ h3.event-title {
     color: var(--primary-color);
 }
 
+/*Gallery*/ 
+    .gallery-page .page-header { 
+        padding-top: 130px; 
+        padding-bottom: 20px; 
+        background-color: var(--background-light); 
+    } 
+    
+    .gallery-page .page-header .section-title { 
+        margin-bottom: 0; 
+        font-size: 4rem; 
+        color: var(--primary-color); } 
+        
+    /* -- Masonry Style -- */ 
+    .gallery-wrapper { 
+        
+        /* This creates the Pinterest columns without complex math */ 
+        column-count: 1; 
+        column-gap: 20px; 
+        padding: 20px 20px 0 20px;; 
+    } 
+    
+    .gallery-item { 
+    display: inline-block; 
+    width: 100%; 
+    margin-bottom: 20px; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    background: #fff; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    transition: transform 0.3s ease; 
+    
+    break-inside: avoid; 
+}
+    
+    .gallery-item:hover { 
+        transform: scale(1.02); 
+    } 
+    
+    .gallery-img { 
+        width: 100%; 
+        height: auto; 
+        display: block;
+        
+    /* Keeps the original aspect ratio */ 
+    display: block;
+    } 
+    
+    .gallery-page {
+    flex: 1; 
+    background-color: var(--background-light); 
+}
+
+
 /* Footer / Contact */
 #contact { 
     background-color: var(--primary-color); 
