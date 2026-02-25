@@ -177,6 +177,74 @@ h3.sub-heading-color {
     object-fit: cover;
 }
 
+/* Booking Section */ 
+/* --- BOOKING SECTION OPTIMIZED --- */ 
+.booking-section { 
+    /* 1. Use your new optimized WebP image */ 
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+    url('../images/warion-taipei-8QIAj5tHDdc-unsplash.webp') center/cover no-repeat;
+    
+    /* 2. Standardize heights and centering */ 
+    min-height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 100px 1rem 40px 1rem; 
+    margin-top: -70px; 
+    /* Pulls section under the navbar */
+   } 
+ /* Remove unnecessary padding from Bootstrap containers to keep the form centered */ 
+ .booking-section .container, 
+ .booking-section .row { 
+    padding-top: 0; 
+    margin-top: 0;
+ } 
+ 
+ /* --- Form Wrapper (Glassmorphism Effect) --- */ 
+ .booking-form-wrapper {
+     background: rgba(255, 255, 255, 0.15); 
+     /* Lighter for better performance */ 
+     backdrop-filter: blur(12px); 
+     -webkit-backdrop-filter: blur(12px); 
+     /* Safari support */ 
+     border: 1px solid rgba(255, 255, 255, 0.2); 
+     padding: 35px 25px;
+     /* Slightly more breathing room */ 
+     border-radius: 20px; 
+     max-width: 650px; 
+     /* Slightly tighter for a professional look */ 
+     width: 100%; 
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+    } 
+    .booking-notice { 
+        color: #ffffff; 
+        font-weight: 500; 
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2); 
+    } 
+    
+    /* Labels and Inputs */ 
+    .booking-section .form-label { 
+        color: #ffffff;
+    /* White labels look better on dark glass backgrounds */ 
+    font-weight: 600; 
+    display: block; 
+    text-align: left; 
+    margin-bottom: 0.5rem; 
+   } 
+    .custom-input { 
+        background-color: rgba(255, 255, 255, 0.9); 
+        border: 1px solid rgba(255, 255, 255, 0.3); 
+        color: #2D2D2D; transition: all 0.3s ease;
+     } 
+     
+     .custom-input:focus { 
+        background-color: #ffffff; 
+        box-shadow: 0 0 0 4px rgba(196, 154, 108, 0.2); 
+        
+        /* Highlight color glow */ 
+        border-color: var(--highlight-color); 
+    } 
+
 /* Event Title */
 h3.event-title {
     font-family: var(--font-sans);
