@@ -160,7 +160,7 @@ footer {
     padding: 100px 1rem 40px 1rem; 
     margin-top: -70px; 
     /* Pulls section under the navbar */
- } 
+   } 
  /* Remove unnecessary padding from Bootstrap containers to keep the form centered */ 
  .booking-section .container, 
  .booking-section .row { 
@@ -380,12 +380,12 @@ footer {
     /* Extra Large */ 
     @media screen and (min-width: 1200px) { 
         #services .card-body { 
-            min-height: 220px; 
+            min-height: 220px
+        } 
             .gallery-wrapper { 
                 column-count: 4; 
             } 
         } 
-    } 
     
     /* Extra Extra Large */ 
     @media screen and (min-width: 1400px) { 
