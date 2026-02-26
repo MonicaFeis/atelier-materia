@@ -266,7 +266,7 @@ h3.sub-heading-color {
     } 
     
     /* Labels and Inputs */ 
-    .booking-section .form-label { 
+    .booking-section .form-label {
         color: #ffffff;
     /* White labels look better on dark glass backgrounds */ 
     font-weight: 600; 
